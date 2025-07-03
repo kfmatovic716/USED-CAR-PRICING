@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# automated files
+.ipynb_checkpoints
+.virtual_documents
+.DS_Store
+
 # Distribution / packaging
 .Python
 build/
@@ -193,7 +198,3 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
-
-.ipynb_checkpoints
-.virtual_documents
-.DS_Store
