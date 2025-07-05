@@ -32,8 +32,16 @@
 </ul>
 
 # MODELING AND EVALUATION
-    Model 1: LINEAR REGRESSION
-    Model 2: RIDGE REGRESSION
-    Model 3: LASSO REGRESSION
+    
+Based on the input features, the model captures approximately 60% of the price variability of used cars. It has a moderate predictive power since 40% of the price variance cannot be explained. There is no significant difference between the R2 train/test results, which indicates good generalization and no significant overfitting/underfitting.
+
+Linear Regression and Ridge Regression performed similarly on the test data, making Linear Regression a strong baseline model. Although Lasso Regression showed the lowest performance, the difference in R² on the test set was not substantial.
+
+From a model complexity perspective, Linear Regression includes all features, which can lead to overfitting—especially in the presence of noisy data. While steps were taken to clean the dataset by removing price outliers and null entries, Linear Regression still does not control for redundant or irrelevant features. Ridge Regression offers more stability by keeping all features but shrinking their influence, making it more robust against multicollinearity and noise. Lasso Regression, on the other hand, simplifies the model by eliminating irrelevant features entirely. This can improve interpretability but may slightly compromise accuracy due to potential underfitting.
+
+Considering all factors, Ridge Regression appers to be the best model. Its regularization capability allows it to generalize better to unseen data by reducing overfitting while still retaining all relevant features.
+   
     
 # RECOMMENDATIONS
+
+Based on the model results, car manufacturer is the most influential factor driving used car prices. The data indicates that brands such as Ferrari, Tesla, Aston Martin, Datsun, and Alfa Romeo command significantly higher prices. Having these premium and distinctive brands in your dealership can greatly enhance its appeal and position it as a high-demand destination for discerning buyers seeking exclusive inventory."
