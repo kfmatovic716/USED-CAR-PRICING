@@ -41,8 +41,10 @@ Linear Regression and Ridge Regression performed similarly on the test data, mak
 From a model complexity perspective, Linear Regression includes all features, which can lead to overfitting—especially in the presence of noisy data. While steps were taken to clean the dataset by removing price outliers and null entries, Linear Regression still does not control for redundant or irrelevant features. Ridge Regression offers more stability by keeping all features but shrinking their influence, making it more robust against multicollinearity and noise. Lasso Regression, on the other hand, simplifies the model by eliminating irrelevant features entirely. This can improve interpretability but may slightly compromise accuracy due to potential underfitting.
 
 Considering all factors, Ridge Regression appers to be the best model. Its regularization capability allows it to generalize better to unseen data by reducing overfitting while still retaining all relevant features.
-   
-    
+<img src="/images/images/linreg_features.png"/>
+<img src="/images/ridge_features.png"/>
+<img src="/images/lasso_features.png"/>
+
 # RECOMMENDATIONS
 
 Based on the model results, car manufacturer is the most influential factor driving used car prices. The data indicates that brands such as Ferrari, Tesla, Aston Martin, Datsun, and Alfa Romeo command significantly higher prices. Having these premium and distinctive brands in your dealership can greatly enhance its appeal and position it as a high-demand destination for discerning buyers seeking exclusive inventory."
