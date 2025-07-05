@@ -18,8 +18,7 @@
     <li>Reformatted year and odometer by recmoving decimal points.</li>
     <li>In examining numerical features like price and odometer, noticed that there were records with zero entries. There were 6.8% records (2,372 records) with $0 price and 0.2% in odometer. Eliminated them due to the lack of a clear pattern in other features to impute or predict it reliably and may cause more errors in the training process. There are 32,496 records in the dataset left after deleteng these records, which still is a good amount of data that can be used for training. </li>
      <li>Price distribution is skewed to the right. Most of the used car price values cluster toward the lower end (left side), with average price of $17K while a long tail stretches out to higher values (right side), representing a few expensive observations like premium-priced cars </li>
-    weak.</li>
-     <img src="/images/price_distribution.png"/>
+    <img src="/images/price_distribution.png"/>
     <li>Examined the outliers in price and it appears that there were 1,007 outliers. Majority of outliers were priced above $47K. For modeling purposes, elminated outliers. Modeling without outliers improves accuracy since it can skew the learning of models especially in regression by pulling the best-fit line or curve toward extreme values resulting to poor generalization and inflating evaluation metrics such as MSE and MAE. Removing outliers also improves variance in the model making stable model predictions and preventing overfitting. There were 31,489 records after deleting outliers. </li>
       <img src="/images/price_dist_boxplot.png"/>
     <li>Ran summary of stats after deleting outliers and noticed the minimum price was $1. Per my research, a reasonable price for a used car in US market should be no less than 2,000. Anything less than that often have serious mechanical issues, may not pass inspections, may have some repairs needed but will cost more to repair than own, salvaged or even scams. Therefore, deleted used car prices less than $2K. There were 30,330 records after this elimination.This is the final dataframe to be used in modeling. Price minimum at $2k and maximum at $47K (upper bound of data) </li>
@@ -41,7 +40,7 @@ Linear Regression and Ridge Regression performed similarly on the test data, mak
 From a model complexity perspective, Linear Regression includes all features, which can lead to overfitting—especially in the presence of noisy data. While steps were taken to clean the dataset by removing price outliers and null entries, Linear Regression still does not control for redundant or irrelevant features. Ridge Regression offers more stability by keeping all features but shrinking their influence, making it more robust against multicollinearity and noise. Lasso Regression, on the other hand, simplifies the model by eliminating irrelevant features entirely. This can improve interpretability but may slightly compromise accuracy due to potential underfitting.
 
 Considering all factors, Ridge Regression appers to be the best model. Its regularization capability allows it to generalize better to unseen data by reducing overfitting while still retaining all relevant features.
-<img src="/images/images/linreg_features.png"/>
+<img src="/images/linreg_features.png"/>
 <img src="/images/ridge_features.png"/>
 <img src="/images/lasso_features.png"/>
 
