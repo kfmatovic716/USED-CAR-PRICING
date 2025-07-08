@@ -44,6 +44,24 @@ Considering all factors, Ridge Regression appers to be the best model. Its regul
 <img src="/images/ridge_features.png"/>
 <img src="/images/lasso_features.png"/>
 
-# RECOMMENDATIONS
+# RECOMMENDATIONS TO CLIENT
 
-Based on the model results, car manufacturer is the most influential factor driving used car prices. The data indicates that brands such as Ferrari, Tesla, Aston Martin, Datsun, and Alfa Romeo command significantly higher prices. Having these premium and distinctive brands in your dealership can greatly enhance its appeal and position it as a high-demand destination for discerning buyers seeking exclusive inventory."
+Based on the model results, car manufacturer is the most influential factor driving used car prices. The data shows that premium brands such as Ferrari, Tesla, Aston Martin, Datsun, and Alfa Romeo consistently command higher prices. Stocking these high-end and distinctive brands can significantly boost a dealership’s appeal, attracting discerning buyers seeking exclusive inventory.
+
+Another important factor is mileage. Cars with lower odometer readings are typically priced higher than those with high mileage. Prioritizing vehicles with less wear and tear can improve both margins and customer satisfaction.
+
+Vehicle age also plays a major role—newer models (more recent years) are associated with higher prices. Similarly, car condition has a strong impact. Dealerships can charge a premium for vehicles that are in excellent, like-new, or good condition, making reconditioning efforts a potentially profitable strategy.
+
+# FUTURE RECOMMENDATIONS REGARDING DATA QUALITY
+
+While outliers in the target variable (price) were removed during preprocessing, many features—particularly manufacturer still contain extreme values. These remaining outliers can skew the results and negatively affect model performance.
+
+To improve the accuracy of future models:
+
+Limit or treat outliers across all features, not just the target.
+
+Ensure more complete and consistent data for key variables like year, odometer, and condition.
+
+Reducing outlier impact may lead to better evaluation metrics such as lower MAE (Mean Absolute Error), which was relatively high in this analysis.
+
+Improving data quality will not only enhance model performance but also provide more actionable insights for pricing and inventory decisions.
